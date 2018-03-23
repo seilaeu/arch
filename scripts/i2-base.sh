@@ -2,7 +2,7 @@
 
 # Mirrors
 
-pacman -Sy reflector &&
+pacman -Sy reflector --needed 
 reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
 
 # Instalar sistema base
