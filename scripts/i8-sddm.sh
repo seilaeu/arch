@@ -1,3 +1,3 @@
 ### SDDM
-pacman -S sddm &&
+pacman -S sddm --needed
 systemctl enable sddm

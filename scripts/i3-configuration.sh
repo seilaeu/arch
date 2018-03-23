@@ -48,13 +48,17 @@ sleep 1
 passwd jribeiro 
 
 # Carregador de arranque
-# Importante!!! Definir X em sdaX
-
-pacman -S btrfs-progs
 
 pacman -S grub os-prober 
 chmod -x /etc/grub.d/30_os-prober 
-grub-install --target=i386-pc --force $device
+
+# Perguntar ao utilizador o valor das variáveis grub device 
+
+# Volume group name
+read -p 'Which device should I use to install grub? ' grubdevice
+
+grub-install --target=i386-pc --force /dev/$grubdevice
+	
 grub-mkconfig -o /boot/grub/grub.cfg 
 
 # Sudo
@@ -62,6 +66,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo 'Descomentar a linha wheel' 
 sleep 5 
 nano /etc/sudoers 
+
+# LVM e BTRFS
+pacman -S lvm2 btrfs-progs --needed
 
 # Activar a rede
 
