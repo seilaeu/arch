@@ -1,27 +1,33 @@
 #/bin/bash
 
-# Teclado
+# Teclado português
+
 loadkeys pt-latin9 
+
 
 # BTRFS e LVM
 
-# Verificar o valor das variáveis vg, lv e xy. 
+# Perguntar ao utilizador o valor das variáveis volume group name, logical volume name e logical volume size
 
 # Volume group name
 read -p 'Volume group name: ' volumegroupnamevar
+export volumegroupnamevar
 
 # Logical volume name
 read -p 'Logical volume name: ' logicalvolumenamevar
+export logicalvolumenamevar
 
 # Logical volume size in Megabites or Gygabites
 read -p 'Logical volume size in GB: ' logicalvolumesizevar
 
+
 # Device's path
 device=/dev/$volumegroupnamevar/$logicalvolumenamevar
+export device
 
 lvcreate -L"$logicalvolumesizevar"G -n $logicalvolumenamevar $volumegroupnamevar
 
-mkfs.btrfs -f -L "$logicalvolumenamevar" /dev/$volumegroupnamevar/$logicalvolumenamevar
+mkfs.btrfs -f -L "$logicalvolumenamevar" $device 
 
 # Criar directorias (activo e reserva) e subvolume raiz
 
@@ -47,7 +53,7 @@ if [[ ! -e /mnt ]]; then
 elif [[ ! -d /mnt ]]; then
     echo "/mnt already exists but is not a directory" 1>&2
 fi
-mount -o subvol=__activo/raiz /dev/$volumegroupnamevar/$logicalvolumenamevar /mnt
+mount -o subvol=__activo/raiz $device /mnt
 df -h &&
 sleep 7
 
