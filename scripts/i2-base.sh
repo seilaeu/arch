@@ -6,12 +6,12 @@ pacman -Sy reflector --needed
 reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
 
 # Instalar sistema base
-pacstrap -i /mnt/ base base-devel 
+pacstrap -i /mnt/ base base-devel btrfs-progs 
  
 # Verificar actualizações
 reflector --verbose -a 1 -l 25 --sort rate --save /etc/pacman.d/mirrorlist
-yaourt -Syy 
-yaourt -Sua --needed
+pacman -Syy 
+pacman -Su 
 
 # fstab
 
