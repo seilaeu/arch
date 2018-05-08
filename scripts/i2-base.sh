@@ -2,17 +2,16 @@
 
 # Mirrors
 
-pacman -Sy reflector --needed 
+pacman -Syy
+pacman -S reflector --needed 
 reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
+pacman -Syy
+pacman -Su
+
 
 # Instalar sistema base
-pacstrap -i /mnt/ base base-devel btrfs-progs 
+pacstrap -i /mnt/ linux btrfs-progs lvm2 pacman dhcpcd systemd-sysvcompat wget vim sudo sed reflector pkgfile patch fakeroot file git gcc make pkg-config
  
-# Verificar actualizações
-reflector --verbose -a 1 -l 25 --sort rate --save /etc/pacman.d/mirrorlist
-pacman -Syy 
-pacman -Su 
-
 # fstab
 
 genfstab -L -p /mnt >> /mnt/etc/fstab 

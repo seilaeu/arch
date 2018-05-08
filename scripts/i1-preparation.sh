@@ -10,8 +10,8 @@ loadkeys pt-latin9
 # Perguntar ao utilizador o valor das variáveis volume group name, logical volume name e logical volume size
 
 # Volume group name
-read -p 'Volume group name: ' volumegroupnamevar
-export volumegroupnamevar
+read -p 'Volume group name: ' volumegroupname
+export volumegroupname
 
 # Logical volume name
 read -p 'Logical volume name: ' logicalvolumenamevar
@@ -22,10 +22,10 @@ read -p 'Logical volume size in GB: ' logicalvolumesizevar
 
 
 # Device's path
-device=/dev/$volumegroupnamevar/$logicalvolumenamevar
+device=/dev/$volumegroupname/$logicalvolumenamevar
 export device
 
-lvcreate -L"$logicalvolumesizevar"G -n $logicalvolumenamevar $volumegroupnamevar
+lvcreate -L"$logicalvolumesizevar"G -n $logicalvolumenamevar $volumegroupname
 
 mkfs.btrfs -f -L "$logicalvolumenamevar" $device 
 

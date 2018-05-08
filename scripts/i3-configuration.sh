@@ -1,3 +1,9 @@
+# Actualizações
+
+reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
+pacman -Syy
+pacman -Su
+
 # Localização
 
 echo "pt_PT.UTF-8 UTF-8" > /etc/locale.gen 
@@ -29,8 +35,6 @@ echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
 
 echo arch > /etc/hostname 
 
-pacman -Syyu 
-
 # Palavra-passe do root
 
 echo 'Definir a palavra passe do root' 
@@ -41,11 +45,11 @@ passwd
 
 echo 'Adicionar utilizador comum' 
 
-useradd -m -G wheel,storage,power,optical,audio,video -s /bin/bash jribeiro 
+useradd -m -G wheel,storage,power,optical,audio,video -s /bin/bash seilaeu 
 
 echo 'Definir a palavra passe do utilizador comum' 
 sleep 1 
-passwd jribeiro 
+passwd seilaeu 
 
 # Carregador de arranque
 
@@ -75,6 +79,10 @@ pacman -S lvm2 btrfs-progs --needed
 systemctl enable dhcpcd.service 
 
 sleep 1
+
+# Servidor gráfico
+
+pacman -S xorg-server xorg-xinit xorg-xkill
 
 # Desmontar /mnt e reiniciar o computador
 umount -Rl /mnt &&

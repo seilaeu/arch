@@ -1,6 +1,6 @@
 pacman -S yaourt --needed
 
-pacman -S xfce4 xfce4-whiskermenu-plugin xfce4-taskmanager thunar-archive-plugin ristretto mousepad atril galculator gvfs gparted xfce4-pulseaudio-plugin clementine menulibre gksu --needed
+pacman -S xfce4 xfce4-whiskermenu-plugin xfce4-taskmanager thunar-archive-plugin ristretto mousepad atril galculator gvfs xfce4-pulseaudio-plugin menulibre gksu --needed
 yaourt -S engrampa-thunar --needed
 yaourt -S mugshot --needed 
 yaourt -S faenza-cupertino-icon-theme
