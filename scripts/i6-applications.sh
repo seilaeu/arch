@@ -2,7 +2,7 @@
 pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 
 # Multimedia
-pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify mplayer --needed
+pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify --needed
 
 # Utilitários
 pacman -S zip unzip unrar p7zip rpmextract --needed
