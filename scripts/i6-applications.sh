@@ -5,7 +5,7 @@ pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify --needed
 
 # Utilitários
-pacman -S zip unzip unrar p7zip rpmextract --needed
+pacman -S zip unzip unrar p7zip --needed
 
 # Tipos de letras
 pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid ttf-ubuntu-font-family opendesktop-fonts --needed
