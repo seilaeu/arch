@@ -27,8 +27,7 @@ pacman -S ncdu subversion git aspell-pt hunspell-pt_pt --needed
 
 yaourt -S google-chrome --needed
 yaourt -S hunspell-pt_pt --needed
-yaourt -S packer --needed
 yaourt -S jre --needed 
 yaourt -S ttf-ms-fonts --needed
 yaourt -S fontconfig-ttf-ms-fonts --needed
-yaourt -S pamac-aur --needed
+yaourt -S pamac-aur pamac-tray-appindicator --needed
