@@ -22,7 +22,7 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 
 
 # Sistema
-pacman -S pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
+pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
 
 
 yaourt -S google-chrome --needed
