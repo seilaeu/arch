@@ -3,6 +3,7 @@ pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 
 # Multimedia
 pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify --needed
+pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
 
 # Utilitários
 pacman -S unzip unrar --needed
