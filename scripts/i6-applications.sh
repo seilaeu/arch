@@ -27,6 +27,7 @@ pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh --needed
 pacman -S gimp --needed
 yaourt -S gimp-plugin-resynthesizer-git --needed
 
+
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
 
