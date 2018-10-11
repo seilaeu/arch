@@ -23,13 +23,13 @@ ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
 hwclock --systohc --utc 
 
 # Pacman
-echo '' >> /etc/pacman.conf 
-echo '[multilib]' >> /etc/pacman.conf 
-echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf 
-echo '' >> /etc/pacman.conf 
-echo '[archlinuxfr]' >> /etc/pacman.conf 
-echo 'SigLevel = Never' >> /etc/pacman.conf 
-echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf 
+#echo '' >> /etc/pacman.conf 
+#echo '[multilib]' >> /etc/pacman.conf 
+#echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf 
+#echo '' >> /etc/pacman.conf 
+#echo '[archlinuxfr]' >> /etc/pacman.conf 
+#echo 'SigLevel = Never' >> /etc/pacman.conf 
+#echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf 
 
 # Hostname
 
@@ -69,7 +69,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'Descomentar a linha wheel' 
 sleep 5 
-nano /etc/sudoers 
+vim /etc/sudoers 
 
 # LVM e BTRFS
 pacman -S lvm2 btrfs-progs --needed
