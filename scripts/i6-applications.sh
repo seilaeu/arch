@@ -1,15 +1,11 @@
 # Escritório
 pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 
-# Multimedia
-<<<<<<< HEAD
-pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol mplayer --needed
 
-yaourt spotify 
-=======
+# Multimedia
 pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify --needed
 pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
->>>>>>> 53b14357a44095ae2358e49fe2aea8e23b267169
+
 
 # Utilitários
 pacman -S unzip unrar --needed
