@@ -10,14 +10,18 @@ pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
 # Utilitários
 pacman -S unzip unrar --needed
 
+
 # Tipos de letras
 pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid ttf-ubuntu-font-family opendesktop-fonts --needed
+
 
 # Aparência
 pacman -S numix-themes gtk-engines --needed
 
+
 # Internet
 pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh --needed
+
 
 # Gráficos
 pacman -S gimp --needed
@@ -26,7 +30,6 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
-
 
 yaourt -S google-chrome --needed
 yaourt -S hunspell-pt_pt --needed
