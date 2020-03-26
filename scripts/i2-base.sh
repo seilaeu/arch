@@ -10,7 +10,7 @@
 
 
 # Instalar sistema base
-pacstrap -i /mnt/ base base-devel linux linux-firmware nano
+pacstrap -i /mnt/ base base-devel linux linux-firmware nano intel-ucode
 
 # btrfs-progs lvm2 pacman dhcpcd systemd-sysvcompat wget vim sudo sed reflector pkgfile patch fakeroot file git gcc make pkg-config
  
