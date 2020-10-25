@@ -31,9 +31,9 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
 
-yaourt -S google-chrome --needed
-yaourt -S hunspell-pt_pt --needed
-yaourt -S jre --needed 
-yaourt -S ttf-ms-fonts --needed
-yaourt -S fontconfig-ttf-ms-fonts --needed
-yaourt -S pamac-aur pamac-tray-appindicator --needed
+yay -S google-chrome --needed
+yay -S hunspell-pt_pt --needed
+yay -S jre --needed 
+yay -S ttf-ms-fonts --needed
+yay -S fontconfig-ttf-ms-fonts --needed
+yay -S pamac-aur pamac-tray-appindicator --needed
