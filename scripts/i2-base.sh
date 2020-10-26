@@ -10,7 +10,7 @@
 
 
 # Instalar sistema base
-pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode
+pacstrap -i /mnt/ base linux linux-firmware sudo nano vim intel-ucode
 
 # fstab
 
