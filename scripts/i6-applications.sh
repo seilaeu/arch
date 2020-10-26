@@ -13,6 +13,8 @@ pacman -S unzip unrar --needed
 
 # Tipos de letras
 pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid ttf-ubuntu-font-family opendesktop-fonts --needed
+pacman -S adobe-source-sans-pro-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-font-family
+
 
 # Aparência
 pacman -S numix-themes gtk-engines --needed
@@ -29,11 +31,14 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git --needed
-pacman -S wget vim sed reflector pkgfile  file git --needed
+pacman -S wget vim sed reflector pkgfile file pkgstats --needed
+
+systemctl start pkgstats.timer
+status with systemctl status pkgstats.timer
 
 # Dicionários
 pacman -S aspell-pt --needed
-yay -S hunspell-pt_pt --needed
+yay -S hunspell-pt_pt mythes-pt_pt --needed
 
 
 # Programação
