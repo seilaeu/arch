@@ -13,8 +13,8 @@ export LANG=pt_PT.UTF-8
 
 # Tipo de letra e teclado no terminal
 
-echo "FONT=default8x16" > /etc/vconsole.conf 
 echo "KEYMAP=pt-latin9" >> /etc/vconsole.conf 
+echo "FONT=default8x16" > /etc/vconsole.conf 
 
 # Fuso horário
 
@@ -22,18 +22,13 @@ ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime
 
 hwclock --systohc --utc 
 
-# Pacman
-#echo '' >> /etc/pacman.conf 
-#echo '[multilib]' >> /etc/pacman.conf 
-#echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf 
-#echo '' >> /etc/pacman.conf 
-#echo '[archlinuxfr]' >> /etc/pacman.conf 
-#echo 'SigLevel = Never' >> /etc/pacman.conf 
-#echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf 
+date 
 
 # Hostname
 
 echo arch > /etc/hostname 
+
+echo "127.0.1.1 localhost.localdomain arch" > /etc/hosts
 
 # Palavra-passe do root
 
@@ -45,7 +40,8 @@ passwd
 
 echo 'Adicionar utilizador comum' 
 
-useradd -m -G wheel,storage,power,optical,audio,video -s /bin/bash seilaeu 
+useradd -m -g users -G wheel -s /bin/bash seilaeu 
+#useradd -m -G wheel,storage,power,optical,audio,video -s /bin/bash seilaeu 
 
 echo 'Definir a palavra passe do utilizador comum' 
 sleep 1 
@@ -53,17 +49,13 @@ passwd seilaeu
 
 # Carregador de arranque
 
-pacman -S grub os-prober 
-chmod -x /etc/grub.d/30_os-prober 
+pacman -S grub efibootmgr 
 
-# Perguntar ao utilizador o valor das variáveis grub device 
-
-# Volume group name
-read -p 'Which device should I use to install grub? ' grubdevice
-
-grub-install --target=i386-pc --force /dev/$grubdevice
-	
-grub-mkconfig -o /boot/grub/grub.cfg 
+mkdir /boot/efi
+mount /dev/sda1 /boot/efi
+lsblk 
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --removable
+grub-mkconfig -o /boot/grub/grub.cfg
 
 # Sudo
 
@@ -71,12 +63,11 @@ echo 'Descomentar a linha wheel'
 sleep 5 
 vim /etc/sudoers 
 
-# LVM e BTRFS
-pacman -S lvm2 btrfs-progs --needed
-
 # Activar a rede
 
-systemctl enable dhcpcd.service 
+pacman -S networkmanager
+
+systemctl enable NetworkManager
 
 sleep 1
 
@@ -85,6 +76,7 @@ sleep 1
 pacman -S xorg-server xorg-xinit xorg-xkill
 
 # Desmontar /mnt e reiniciar o computador
+exit
 umount -Rl /mnt &&
 sleep 3 &&
 reboot
