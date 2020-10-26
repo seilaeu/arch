@@ -18,4 +18,4 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 # Mudar raiz para a directoria mnt
 
-arch-chroot /mnt 
+arch-chroot /mnt /bin/bash
