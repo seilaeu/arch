@@ -71,10 +71,6 @@ systemctl enable NetworkManager
 
 sleep 1
 
-# Servidor gráfico
-
-pacman -S xorg-server xorg-xinit xorg-xkill
-
 # Desmontar /mnt e reiniciar o computador
 exit
 umount -Rl /mnt &&
