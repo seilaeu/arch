@@ -29,11 +29,17 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 
 
 # Sistema
-pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
-pacman -S wget vim sed reflector pkgfile patch fakeroot file git gcc make pkg-config
+pacman -S pkgfile pacman-contrib ncdu subversion git --needed
+pacman -S wget vim sed reflector pkgfile  file git --needed
+
+# Dicionários
+pacman -S aspell-pt --needed
+yay -S hunspell-pt_pt --needed
+
+# Programação
+pacman -S patch fakeroot gcc make pkg-config --needed
 
 yay -S google-chrome --needed
-yay -S hunspell-pt_pt --needed
 yay -S jre --needed 
 yay -S ttf-ms-fonts --needed
 yay -S fontconfig-ttf-ms-fonts --needed
