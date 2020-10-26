@@ -16,10 +16,6 @@ pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid
 pacman -S adobe-source-sans-pro-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-font-family
 
 
-# Aparência
-pacman -S numix-themes gtk-engines --needed
-
-
 # Internet
 pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh --needed
 
