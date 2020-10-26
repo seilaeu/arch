@@ -4,6 +4,10 @@
 
 loadkeys pt-latin9 
 
+# Verificar se estamos no modo UEFI
+
+ls /sys/firmware/efi/efivars
+
 # Ligação à Internet
 
 ping -c 3 archlinux.org
