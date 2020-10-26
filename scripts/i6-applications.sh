@@ -14,7 +14,6 @@ pacman -S unzip unrar --needed
 # Tipos de letras
 pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid ttf-ubuntu-font-family opendesktop-fonts --needed
 
-
 # Aparência
 pacman -S numix-themes gtk-engines --needed
 
@@ -44,6 +43,16 @@ pacman -S patch fakeroot gcc make pkg-config --needed
 # Acestream
 
 yaourt -S acestream-player --needed
+
+# Firewall
+
+sudo pacman -S ufw
+
+sudo ufw enable 
+
+sudo ufw status verbose
+
+sudo systemctl enable ufw.service
 
 yay -S google-chrome --needed
 yay -S jre --needed 
