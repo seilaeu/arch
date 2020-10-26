@@ -36,8 +36,14 @@ pacman -S wget vim sed reflector pkgfile  file git --needed
 pacman -S aspell-pt --needed
 yay -S hunspell-pt_pt --needed
 
+
 # Programação
 pacman -S patch fakeroot gcc make pkg-config --needed
+
+
+# Acestream
+
+yaourt -S acestream-player --needed
 
 yay -S google-chrome --needed
 yay -S jre --needed 
