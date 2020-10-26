@@ -4,17 +4,14 @@
 
 loadkeys pt-latin9 
 
+# Ligação à Internet
+
+ping -c 3 archlinux.org
+
+ip link
+
 # Montar raiz em /mnt
 
-if [[ ! -e /mnt ]]; then
-    mkdir /mnt
-elif [[ ! -d /mnt ]]; then
-    echo "/mnt already exists but is not a directory" 1>&2
-fi
-mount -o subvol=__activo/raiz $device /mnt
-df -h &&
-sleep 7
+mount /dev/sdaX /mnt
 
-# Fundamental para exportar as variáveis acima definidas e disponibilizá-las para outros "scripts"
-#bash
-
+lsblk
