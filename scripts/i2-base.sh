@@ -14,7 +14,7 @@ pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode
 
 # fstab
 
-genfstab -L -p /mnt >> /mnt/etc/fstab 
+genfstab -U -p /mnt >> /mnt/etc/fstab 
 
 # Mudar raiz para a directoria mnt
 
