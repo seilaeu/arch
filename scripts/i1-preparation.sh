@@ -57,6 +57,6 @@ mount -o subvol=__activo/raiz $device /mnt
 df -h &&
 sleep 7
 
-# Fundamental para exportar as variáveis acima definidas e disponibilizálas para outros "scripts"
+# Fundamental para exportar as variáveis acima definidas e disponibilizá-las para outros "scripts"
 #bash
 
