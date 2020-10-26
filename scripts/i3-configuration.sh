@@ -72,7 +72,7 @@ systemctl enable NetworkManager
 sleep 1
 
 # Desmontar /mnt e reiniciar o computador
-exit
+#exit
 umount -Rl /mnt &&
 sleep 3 &&
 reboot
