@@ -30,6 +30,7 @@ yaourt -S gimp-plugin-resynthesizer-git --needed
 
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git aspell-pt hunspell-pt_pt --needed
+pacman -S wget vim sed reflector pkgfile patch fakeroot file git gcc make pkg-config
 
 yay -S google-chrome --needed
 yay -S hunspell-pt_pt --needed
