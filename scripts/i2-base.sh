@@ -12,8 +12,6 @@
 # Instalar sistema base
 pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode
 
-# btrfs-progs lvm2 pacman dhcpcd systemd-sysvcompat wget vim sudo sed reflector pkgfile patch fakeroot file git gcc make pkg-config
- 
 # fstab
 
 genfstab -L -p /mnt >> /mnt/etc/fstab 
