@@ -72,7 +72,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'Descomentar a linha wheel' 
 sleep 5 
-vim /etc/sudoers 
+EDITOR=nano visudo 
 
 # Activar a rede
 
