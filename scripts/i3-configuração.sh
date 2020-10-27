@@ -1,21 +1,3 @@
-# Actualizações
-
-reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
-pacman -Syy
-pacman -Su
-
-# Localização
-
-echo "pt_PT.UTF-8 UTF-8" > /etc/locale.gen 
-locale-gen 
-echo "LANG=pt_PT.UTF-8" > /etc/locale.conf 
-export LANG=pt_PT.UTF-8 
-
-# Tipo de letra e teclado no terminal
-
-echo "KEYMAP=pt-latin9" >> /etc/vconsole.conf 
-echo "FONT=default8x16" > /etc/vconsole.conf 
-
 # Fuso horário
 
 ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime 
@@ -24,11 +6,36 @@ hwclock --systohc --utc
 
 date 
 
-# Hostname
+# Localização
+
+echo "pt_PT.UTF-8 UTF-8" > /etc/locale.gen 
+
+locale-gen 
+
+echo "LANG=pt_PT.UTF-8" > /etc/locale.conf 
+
+export LANG=pt_PT.UTF-8 
+
+# Tipo de letra e teclado no terminal
+
+echo "KEYMAP=pt-latin9" > /etc/vconsole.conf 
+echo "FONT=default8x16" >> /etc/vconsole.conf 
+
+# Configuração da Rede
 
 echo arch > /etc/hostname 
 
-echo "127.0.1.1 localhost.localdomain arch" > /etc/hosts
+echo "127.0.0.1	localhost" > /etc/hosts
+
+echo "::1		localhost" >> /etc/hosts
+
+echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
+
+
+# Initramfs
+
+mkinitcpio -P
+
 
 # Palavra-passe do root
 
@@ -52,9 +59,13 @@ passwd seilaeu
 pacman -S grub efibootmgr 
 
 mkdir /boot/efi
+
 mount /dev/sda1 /boot/efi
+
 lsblk 
-grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi --removable
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
+
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Sudo
