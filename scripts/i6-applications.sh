@@ -17,7 +17,7 @@ pacman -S adobe-source-sans-pro-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-d
 
 
 # Internet
-pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh --needed
+pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh torbrowser-launcher --needed
 
 
 # Gráficos
