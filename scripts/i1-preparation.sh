@@ -4,26 +4,34 @@
 
 loadkeys pt-latin9 
 
-# Verificar se estamos no modo UEFI
+# Modo UEFI
 
 ls /sys/firmware/efi/efivars
+
+
+# Interface de rede
+
+ip link
 
 # Ligação à Internet
 
 ping -c 3 archlinux.org
 
-ip link
+# Relógio
+
+timedatectl set-ntp true
 
 # Partição UEFI
 mkfs.fat -F32 /dev/sda1
 
-# Criar partição root e home e montá-las em /mnt e em /mnt/home, respectivamente:
+# Partição root 
 
 mkfs.ext4 /dev/sda2
-mkfs.ext4 /dev/sda3
-
 mount /dev/sda2 /mnt
 
+# Partição home 
+
+mkfs.ext4 /dev/sda3
 mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 
