@@ -30,7 +30,7 @@ pacman -S pkgfile pacman-contrib ncdu subversion git --needed
 pacman -S wget vim sed reflector pkgfile file pkgstats --needed
 
 systemctl start pkgstats.timer
-status with systemctl status pkgstats.timer
+systemctl status pkgstats.timer
 
 # Dicionários
 pacman -S aspell-pt --needed
