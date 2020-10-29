@@ -33,6 +33,17 @@ pacman -S wget vim sed reflector pkgfile file pkgstats --needed
 systemctl start pkgstats.timer
 systemctl status pkgstats.timer
 
+# YAY
+
+cd Transferências/
+wget https://aur.archlinux.org/packages/yay/
+tar xvf yay.tar.gz 
+cd yay
+makepkg -si
+cd ..
+rm -rf yay*
+   
+   
 # Dicionários
 pacman -S aspell-pt --needed
 yay -S hunspell-pt_pt mythes-pt_pt --needed
