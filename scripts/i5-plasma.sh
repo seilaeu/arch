@@ -5,6 +5,9 @@ kdeconnect kdeplasma-addons plasma-nm plasma-pa spectacle kfind breeze-gtk kde-g
 
 systemctl enable sddm
 
+# Teclado português no sddm
+echo "setxkbmap pt" >> /usr/share/sddm/scripts/Xsetup
+
 cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf
 
 echo "Definir o tema breeze e o Numlock=On"
