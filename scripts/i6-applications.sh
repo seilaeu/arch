@@ -56,13 +56,6 @@ sudo ufw status verbose
 
 sudo systemctl enable ufw.service
 
-# Sincronização do fuso horário
-
-pacman -S ntp
-
-timedatectl set-timezone Europe/Lisbon
-timedatectl set-ntp true
-
 # Java
 
 yay -S jre --needed 
