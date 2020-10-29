@@ -16,11 +16,13 @@ sleep 5
 
 ip link
 
+sleep 5
 
 # Ligação à Internet
 
 ping -c 3 archlinux.org
 
+sleep 5
 
 # Relógio
 
