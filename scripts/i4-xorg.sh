@@ -1,4 +1,4 @@
 # Servidor gráfico
 
-pacman -S xorg-server xorg-xinit xorg-xkill
+pacman -S xorg-server xorg-xinit xorg-xkill xdpyinfo
 
