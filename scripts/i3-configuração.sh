@@ -1,6 +1,10 @@
 # Fuso horário
 
-ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime 
+#ln -sf /usr/share/zoneinfo/Europe/Lisbon /etc/localtime 
+
+timedatectl set-timezone Europe/Lisbon
+
+timedatectl set-ntp true
 
 hwclock --systohc --utc 
 
