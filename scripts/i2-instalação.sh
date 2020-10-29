@@ -1,20 +1,47 @@
 #/bin/bash
 
-# Mirrors
+# Teclado português
 
-pacman -Syy
-pacman -S reflector --needed 
-reflector --verbose --country 'Portugal' --sort rate --save /etc/pacman.d/mirrorlist 
-pacman -Syy
-pacman -Su
+loadkeys pt-latin9 
+
+
+# Modo UEFI
+
+ls /sys/firmware/efi/efivars
+
+sleep 5
+
+
+# Interface de rede
+
+ip link
+
+
+# Ligação à Internet
+
+ping -c 3 archlinux.org
+
+
+# Relógio
+
+timedatectl set-ntp true
+
+date 
+
+sleep 5
+
 
 # Instalar sistema base
+
 pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode
+
 
 # fstab
 
 genfstab -U -p /mnt >> /mnt/etc/fstab 
+
 cat /etc/fstab
+
 
 # Mudar raiz para a directoria mnt
 
