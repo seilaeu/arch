@@ -3,17 +3,18 @@ pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 
 
 # Multimedia
-pacman -S vlc alsa-utils pulseaudio pulseaudio-alsa pavucontrol spotify --needed
+pacman -S vlc pulseaudio pulseaudio-alsa --needed
 pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
 
+# pacman -S alsa-utils pavucontrol spotify
 
 # Utilitários
-pacman -S unzip unrar --needed
+#pacman -S unzip unrar --needed
 
 
 # Tipos de letras
 pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid ttf-ubuntu-font-family opendesktop-fonts --needed
-pacman -S adobe-source-sans-pro-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-font-family
+#pacman -S adobe-source-sans-pro-fonts ttf-anonymous-pro ttf-bitstream-vera ttf-dejavu ttf-droid ttf-gentium ttf-liberation ttf-ubuntu-font-family
 
 
 # Internet
@@ -21,8 +22,8 @@ pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh torbrowser-launche
 
 
 # Gráficos
-pacman -S gimp --needed
-yaourt -S gimp-plugin-resynthesizer-git --needed
+#pacman -S gimp --needed
+#yaourt -S gimp-plugin-resynthesizer-git --needed
 
 
 # Sistema
@@ -43,7 +44,7 @@ pacman -S patch fakeroot gcc make pkg-config --needed
 
 # Acestream
 
-yaourt -S acestream-player --needed
+#yay -S acestream-player --needed
 
 # Firewall
 
@@ -62,8 +63,11 @@ pacman -S ntp
 timedatectl set-timezone Europe/Lisbon
 timedatectl set-ntp true
 
-yay -S google-chrome --needed
+# Java
+
 yay -S jre --needed 
-yay -S ttf-ms-fonts --needed
-yay -S fontconfig-ttf-ms-fonts --needed
-yay -S pamac-aur pamac-tray-appindicator --needed
+
+#yay -S google-chrome --needed
+#yay -S ttf-ms-fonts --needed
+#yay -S fontconfig-ttf-ms-fonts --needed
+#yay -S pamac-aur pamac-tray-appindicator --needed
