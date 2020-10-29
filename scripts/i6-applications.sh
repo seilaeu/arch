@@ -55,6 +55,13 @@ sudo ufw status verbose
 
 sudo systemctl enable ufw.service
 
+# Sincronização do fuso horário
+
+pacman -S ntp
+
+timedatectl set-timezone Europe/Lisbon
+timedatectl set-ntp true
+
 yay -S google-chrome --needed
 yay -S jre --needed 
 yay -S ttf-ms-fonts --needed
