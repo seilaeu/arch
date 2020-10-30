@@ -14,6 +14,10 @@ sleep 5
 # Partição UEFI
 
 #mkfs.fat -F32 /dev/sda1
+#mkdir /boot/efi
+#mount /dev/sda1 /boot/efi
+
+#lsblk 
 
 
 # Partição root 
@@ -31,5 +35,5 @@ sleep 5
 
 #mount /dev/sda3 /mnt/home
 
-lsblk
+#lsblk
 
