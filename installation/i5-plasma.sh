@@ -1,6 +1,6 @@
 # Plasma 5
 
-pacman -S plasma-desktop konsole dolphin kate kcalc okular gwenview qbittorrent ark clementine kinfocenter kipi-plugins redshift \
+pacman -S plasma-desktop konsole dolphin kate kcalc okular gwenview qbittorrent ark clementine kinfocenter kipi-plugins \
 kdeconnect kdeplasma-addons plasma-nm plasma-pa spectacle kfind breeze-gtk kde-gtk-config sddm --needed
 
 systemctl enable sddm
