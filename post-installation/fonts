@@ -44,5 +44,15 @@ Forçar os ppp: 102
 
 Konsole: Terminus 11
 
+# Windows Fonts
 
+su
+
+mkdir /usr/share/fonts/WindowsFonts
+
+cp /windows/Windows/Fonts/* /usr/share/fonts/WindowsFonts/
+
+chmod 644 /usr/share/fonts/WindowsFonts/*
+
+fc-cache --force
 
