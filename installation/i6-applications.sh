@@ -28,7 +28,7 @@ pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh torbrowser-launche
 
 # Sistema
 pacman -S pkgfile pacman-contrib ncdu subversion git --needed
-pacman -S wget vim sed reflector pkgfile file pkgstats --needed
+pacman -S vim sed reflector file pkgstats --needed
 
 systemctl start pkgstats.timer
 systemctl status pkgstats.timer
