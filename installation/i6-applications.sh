@@ -5,6 +5,8 @@ pacman -S libreoffice-fresh libreoffice-fresh-pt --needed
 # Multimedia
 pacman -S vlc pulseaudio pulseaudio-alsa --needed
 pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
+#pacman -S a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins libdvdcss libdvdread libdvdnav gecko-mediaplayer dvd+rw-tools dvdauthor dvgrab cdrdao
+
 
 # pacman -S alsa-utils pavucontrol spotify
 
