@@ -36,11 +36,6 @@ echo "::1		localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 
 
-# Initramfs
-
-mkinitcpio -P
-
-
 # Palavra-passe do root
 
 echo 'Definir a palavra passe do root' 
@@ -61,12 +56,6 @@ passwd seilaeu
 # Carregador de arranque
 
 pacman -S grub efibootmgr 
-
-mkdir /boot/efi
-
-mount /dev/sda1 /boot/efi
-
-lsblk 
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch --removable
 
