@@ -11,7 +11,7 @@ pacman -S gst-plugins-good gst-plugins-bad gst-plugins-ugly --needed
 # pacman -S alsa-utils pavucontrol spotify
 
 # Utilitários
-#pacman -S unzip unrar --needed
+#pacman -S unzip p7zip unrar --needed
 
 
 # Tipos de letras
