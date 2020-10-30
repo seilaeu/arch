@@ -30,3 +30,13 @@ xrdb -query | grep dpi
 nano /etc/profile.d/freetype2.sh 
 
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+
+Plasma 5
+
+Geral: BitStreamVera Sans 10 
+Tamanho fixo: Monospace 10
+
+Konsole: Terminus 11
+
+
+
