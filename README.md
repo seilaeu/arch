@@ -1,1 +1,2 @@
-# arch
+# arch installation
+# arch post-installation
