@@ -1,0 +1,9 @@
+Coursor theme: Oxygen 10 Blue
+
+Copiar pasta dos ícones para /usr/share/icons
+
+Editar as definições do plasma, em cursores.
+
+nano /etc/sddm.conf
+
+CursorTheme=Oxygen 10 Blue
