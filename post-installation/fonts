@@ -33,8 +33,13 @@ export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 
 Plasma 5
 
-Geral: BitStreamVera Sans 10 
+Geral, Barra de ferramentas, Menu e Título da janela: BitStreamVera Sans 10 
 Tamanho fixo: Monospace 10
+Pequeno: BitStreamVera Sans 9
+
+Suavização activada
+Sub-pixel: RGB
+Sugestão: Completa
 
 Konsole: Terminus 11
 
