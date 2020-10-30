@@ -1,1 +1,2 @@
-
+pacman -S redshift 
+yay -S plasma5-applets-redshift-control-git
