@@ -41,3 +41,43 @@ $ sudo systemctl daemon-reload
 $ sudo nano /etc/security/limits.conf
 * hard core 0
 
+First, enable the module:
+
+/etc/modules-load.d/zram.conf
+
+ZRAM
+
+Configure the number of /dev/zram nodes you need.
+
+nano /etc/modprobe.d/zram.conf
+
+options zram num_devices=2
+
+Create the udev rule as shown in the example.
+
+/etc/udev/rules.d/99-zram.rules
+
+KERNEL=="zram0", ATTR{disksize}="1024M" RUN="/usr/bin/mkswap /dev/zram0", TAG+="systemd"
+KERNEL=="zram1", ATTR{disksize}="1024M" RUN="/usr/bin/mkswap /dev/zram1", TAG+="systemd"
+
+Add /dev/zram to your fstab.
+
+/etc/fstab
+
+/dev/zram0 none swap defaults 0 0
+/dev/zram1 none swap defaults 0 0
+
+
+Swappiness
+
+# Decrease swap usage to a more reasonable level
+
+$ cat /proc/sys/vm/swappiness
+
+$ sudo nano /etc/sysctl.conf
+vm.swappiness=10
+
+Isto significa que a swap só começará a ser usada quando for atingida 90% da RAM. 
+
+# Improve cache management
+vm.vfs_cache_pressure=50
