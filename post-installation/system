@@ -47,6 +47,8 @@ First, enable the module:
 
 ZRAM
 
+modprobe zram
+
 Configure the number of /dev/zram nodes you need.
 
 nano /etc/modprobe.d/zram.conf
