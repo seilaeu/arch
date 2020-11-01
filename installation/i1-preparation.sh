@@ -4,8 +4,6 @@
 
 timedatectl set-timezone Europe/Lisbon
 
-timedatectl set-ntp true
-
 date
 
 sleep 5
