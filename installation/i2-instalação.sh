@@ -35,7 +35,7 @@ sleep 5
 
 # Instalar sistema base
 
-pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode ntp
+pacstrap -i /mnt/ base linux linux-firmware sudo nano intel-ucode
 
 
 # fstab
