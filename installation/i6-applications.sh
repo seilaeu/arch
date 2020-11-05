@@ -20,7 +20,7 @@ pacman -S terminus-font ttf-bitstream-vera ttf-freefont ttf-liberation ttf-droid
 
 
 # Internet
-pacman -S firefox firefox-i18n-pt-pt flashplugin wget openssh torbrowser-launcher --needed
+pacman -S firefox firefox-i18n-pt-pt flashplugin wget torbrowser-launcher --needed
 
 
 # Gráficos
