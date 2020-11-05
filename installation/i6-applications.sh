@@ -37,11 +37,9 @@ systemctl status pkgstats.timer
 
 # YAY
 
-cd Transferências/
-wget https://aur.archlinux.org/packages/yay/
-tar xvf yay.tar.gz 
+git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -rsi
 cd ..
 rm -rf yay*
    
